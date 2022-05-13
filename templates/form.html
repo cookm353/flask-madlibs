@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Mad Libs Generator{% endblock %}
+
+{% block content %}
+    <form action="/story">
+        {% for prompt in story.prompts %}
+        <!-- {{prompt = prompt.title().replace("_", " ")}} -->
+        <label for={{prompt}}>{{prompt}}</label>
+        <input type="text" name={{prompt}} id={{prompt}}><br><br>
+        
+        {% endfor %}
+        <button>Submit</button>
+    </form>
+{% endblock %}
