@@ -3,10 +3,11 @@ from stories import story
 
 app = Flask(__name__)
 
-@app.route("/form")
+@app.route("/")
 def story_form():
-    return render_template("form.html", story=story)
+    return render_template("form.html", prompts=story.prompts,
+        template = story.template)
 
 if __name__ == "__main__":
-    app.run()
-    # print(story.prompts)
+    # app.run()
+    print(story.prompts)

@@ -4,8 +4,8 @@
 
 {% block content %}
     <form action="/story">
-        {% for prompt in story.prompts %}
-        <!-- {{prompt = prompt.title().replace("_", " ")}} -->
+        {% for prompt in prompts %}
+        {% set prompt = prompt.title().replace("_", " ") %}
         <label for={{prompt}}>{{prompt}}</label>
         <input type="text" name={{prompt}} id={{prompt}}><br><br>
         
