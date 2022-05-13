@@ -2,13 +2,13 @@
 
 {% block title %}Mad Libs Generator{% endblock %}
 
+{% block h1 %}Mad-Libs Generatoromatic {% endblock %}
+
 {% block content %}
     <form action="/story">
         {% for prompt in prompts %}
-        {% set prompt = prompt.title().replace("_", " ") %}
-        <label for={{prompt}}>{{prompt}}</label>
+        <label for={{prompt}}>{{prompt.title().replace("_", " ")}}</label>
         <input type="text" name={{prompt}} id={{prompt}}><br><br>
-        
         {% endfor %}
         <button>Submit</button>
     </form>

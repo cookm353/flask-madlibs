@@ -24,7 +24,7 @@ class Story:
         self.prompts = words
         self.template = text
 
-    def generate(self, answers):
+    def generate(self, answers: dict):
         """Substitute answers into text."""
 
         text = self.template
