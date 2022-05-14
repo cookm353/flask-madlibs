@@ -7,8 +7,8 @@
 {% block content %}
     <form action="/story">
         {% for prompt in prompts %}
-        <label for={{prompt}}>{{prompt.title().replace("_", " ")}}</label>
-        <input type="text" name={{prompt}} id={{prompt}}><br><br>
+        <label for={{prompt}}>{{prompt.title().replace("_", " ")}}:</label>
+        <input type="text" name={{prompt}}><br><br>
         {% endfor %}
         <button>Submit</button>
     </form>
