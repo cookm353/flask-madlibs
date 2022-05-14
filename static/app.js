@@ -12,3 +12,9 @@ $("form").on('click', "button", (evt)=> {
         })
     }
 })
+
+// Remove red border after updating value of input
+$("form").on("change", "input", (evt) => {
+    const input = evt.target
+    input.classList.remove("emptyInput")
+})
